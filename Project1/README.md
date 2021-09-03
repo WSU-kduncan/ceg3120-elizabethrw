@@ -1,7 +1,11 @@
 Project 1 Rubric Questions
+---
+
 Name: Elizabeth Wright
+---
 
 Setup:
+---
 1. Setup for repositories: To setup a repository, use "git init --bare newrepo2". Check that the repository is a repository by checking that it has branches, hooks, etc. using ls -lah. I then cloned this repository by using "git clone ubuntu@52.3.67.147:/home/ubuntu/newrepo2". I then check the repository was successfully cloned by using "ls -lah" and checking the repository has a ".git" folder.
 2. Users, folders, permissions:
  - Users: I set up a user using "git config --global user.name "Elizabeth"". Omit "--global" if the identity is only for the one repository. 
@@ -10,6 +14,7 @@ Setup:
 3. SSH key directions: cd to your ssh folder, vim authorized_keys, and add the public key to be authorized (could also use the public key that is already in the folder). I can then make my user I made have this key. This will allow the user I made to use the repository in an authorized way without putting a risk to their own system by using a private key.
 
 Usage guide:
+---
 4. Clone usage and description: I used git clone to clone the repository I created. Clone is used to create a copy of the repository a which creates a foler, a copy of files that existed, and creates a connection back to the remote.
 5. Init usage and description: I used init to create a new repository. Init is used to initialize an empty/new repository.
 6. Add usage and description: I used add to track a test file I created. Add is used to add files to be tracked by the repository (if they are new).
@@ -17,5 +22,6 @@ Usage guide:
 8. Push usage and description: I used push to sync the changes I made on my terminal to the remote. Push is used to sync the local terminal to the remote.
 
 Proof:
+---
 9. Screenshot(s) turned in via Pilot.
 10. Screenshot(s) turned in via Pilot.
