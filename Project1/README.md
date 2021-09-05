@@ -25,3 +25,4 @@ Proof:
 ---
 9. Screenshot(s) turned in via Pilot.
 10. Screenshot(s) turned in via Pilot.
+Link to screenshot: https://docs.google.com/document/d/1JTtyqLlKKGHnGiWbQWkAFg6xHyU2hswhQLk3OENvOWo/edit?usp=sharing
