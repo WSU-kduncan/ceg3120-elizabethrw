@@ -18,5 +18,5 @@ Usage
 Research
 ---
 
-6. To keep the program/bot active, the script needs to be hosted somewhere at all times. A person could use a server for discord bots to continually run on, called a VPS (Virtual Private Server). This would work because it is a way for your program to be continually running, just like if it were to run on a computer's terminal at all times. Using the Cloud to run the Discord bot would also work for the same reason a VPS would.
+6. To keep the program/bot active, the script needs to be hosted somewhere at all times. A person could use a server for discord bots to continually run on, called a VPS (Virtual Private Server). This would work because it is a way for your program to be continually running, just like if it were to run on a computer's terminal at all times. Using the Cloud or Linux's screen command to run the Discord bot would also work for the same reason a VPS would.
 
