@@ -76,7 +76,7 @@ Resources:
     DependsOn: AttachGateway
     Properties:
       Domain: vpc
-      ]Id: !Ref PublicUbuntuInstance
+      Id: !Ref PublicUbuntuInstance
   Lab1SecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
