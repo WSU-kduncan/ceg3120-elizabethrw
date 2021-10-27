@@ -76,7 +76,7 @@ Resources:
     DependsOn: AttachGateway
     Properties:
       Domain: vpc
-      InstanceId: !Ref PublicUbuntuInstance
+      ]Id: !Ref PublicUbuntuInstance
   Lab1SecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
     Properties:
@@ -105,14 +105,14 @@ Resources:
         - !FindInMap 
           - AWSInstanceType2Arch
           - t2.micro
-          - Arch
+          - Arch        
       InstanceType: t2.micro
-      KeyName: !Ref CF-instance
+      KeyName: !Ref KeyName
       Tags:
         - Key: Application
           Value: !Ref 'AWS::StackId'
         - Key: Name
-          Value: CEG2350 Ubuntu
+          Value: CF-instance
       NetworkInterfaces:
         - GroupSet:
             - !Ref Lab1SecurityGroup
@@ -127,5 +127,8 @@ Resources:
             #!/bin/bash -xe
             apt-get update && \
             apt-get install -y \
-              replace-me && \
+              git \
+              python3 \
+              pip3 && \
+            sudo hostname wright-AMI && \  
             reboot
