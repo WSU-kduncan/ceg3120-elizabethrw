@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  Testing area for AWS: This template builds a linux VM for CEG 2350 @ WSU.
+  Testing area for AWS: Wright CF Template to create a VPC, allow SSH access from trusted networks, and create a single instance with an Elastic IP address.
 Parameters:
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
@@ -21,7 +21,7 @@ Mappings:
   AWSRegionUbuntu: # AMI for Ubuntu server in each supported region 
     us-east-1:   # N. Virginia
       PV64: NOT_SUPPORTED
-      HVM64: ami-07d0cf3af28718ef8
+      HVM64: ami-09e67e426f25ce0d7
       HVMG2: NOT_SUPPORTED
 Resources:
   VPC:
@@ -86,19 +86,15 @@ Resources:
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: !Ref SSHLocation
+          CidrIp: 130.108.0.0/16  # WSU CIDR
         - IpProtocol: tcp
           FromPort: '22'
           ToPort: '22'
-          CidrIp: 130.108.0.0/16  # WSU CIDR
-        - IpProtocol: -1
-          FromPort: '-1'
-          ToPort: '-1'
-          CidrIp: 10.0.0.0/24
+          CidrIp: 174.97.124.25/32
         - IpProtocol: tcp
-          FromPort: '1'
-          ToPort: '65535'
-          CidrIp: 0.0.0.0/0
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 10.0.0.0/24
   PublicUbuntuInstance:
     Type: 'AWS::EC2::Instance'
     DependsOn: AttachGateway
@@ -111,7 +107,7 @@ Resources:
           - t2.micro
           - Arch
       InstanceType: t2.micro
-      KeyName: !Ref KeyName
+      KeyName: !Ref CF-instance
       Tags:
         - Key: Application
           Value: !Ref 'AWS::StackId'
