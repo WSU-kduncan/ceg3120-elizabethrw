@@ -5,7 +5,7 @@ These are the steps I took in trying to complete all 10 modifications properly (
 2. Replaced the AMI by going under "AWSRegionUbuntu", then changing the "HVM64" ami to the ami of "Ubuntu Server 20.04 LTS (HVM), SSD Volume Type", which is listed from finding it via "Launch Instances" and searching "Ubuntu" when in "Step 1: Choose an Amazon Machine Image (AMI)".
 3. Made the VPC range 10.0.0.0/16 by going under "Resources:", under "VPC:", then after "CidrBlock:" I put "10.0.0.0/16".
 4. Made the subnet range 10.0.0.0/24 by going under "Resources:", under "Subnet", then after "CiderBlock:" I put "10.0.0.0/24".
-5. For the security group setting for inbound SSH within VPC, under "SecurityGroupIngress" I put the IpProtocol as tcp, the FromPort and ToPort as 22, and the CidrIp as 10.0.0.0/24.
+5. For the security group setting for inbound SSH within VPC, under "SecurityGroupIngress" I put the IpProtocol as tcp, the FromPort and ToPort as 22, and the CidrIp as 10.0.0.0/16.
 6. For the security group setting for inbound SSH from home / trusted network(s), under "SecurityGroupIngress" I put the IpProtocol as tcp, the FromPort and ToPort as 22, and the CidrIp as 174.97.124/32 (which is my home IP address cidr notation).
 7. For the security group setting for inbound SSH from WSU, under "SecurityGroupIngress", I put the IpProtocol as tcp, the FromPort and ToPort as 22, and the CidrIp as 130.108.0.0/16.
 8. For making the instance setting to set "Tag" "Name" to "CF-instance", I went under "PublicUbuntuInstance:", then under "Tags", and under "Key: Name", I set the "Value:" to "CF-instance".
