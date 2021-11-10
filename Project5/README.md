@@ -15,7 +15,9 @@ README.md Documentation - Part 2
 3. HAProxy Configuration & Documentation Requirements:
  - How to install package: Use the command "apt-get install -y packageName" (insert name of package where "packageName" is) to install a package.
  - Modified files / their locations: Modified haproxy.cfg in /etc/haproxy
- - Configurations set: Please look at the haproxy.cfg file included, but to summarize, the global settings are standard, where the maxconn (max connections) is set to 50,000, and the user and group are set to haproxy. In defaults, the timeout connect is every 10 seconds, the timeout for the client and server is every 30 seconds, the mode is set to tcp, and the option is set to tcplog. The maxconn per server is 3,000. In the frontend, there is a bind to the private IP address of my proxy to port 80, and the default backend is set to back_end. In the backend, the balance is set to roundrobin, and the servers are set to the webServ1Host and webServ2Host I created.
+ - Configurations set: To summarize the changes to haproxy.cfg, the global settings are standard, where the maxconn (max connections) is set to 50,000, and the user and group are set to haproxy. In defaults, the timeout connect is every 10 seconds, the timeout for the client and server is every 30 seconds, the mode is set to tcp, and the option is set to tcplog. The maxconn per server is 3,000. In the frontend, there is a bind to the private IP address of my proxy to port 80, and the default backend is set to back_end. In the backend, the balance is set to roundrobin, and the servers are set to the webServ1Host and webServ2Host I created.
+Image of my haproxy.cfg file (in case the description is unclear):
+![haproxy cfg](https://user-images.githubusercontent.com/77339445/141180383-057086f5-3592-4672-b6c8-833dfe762fba.png)
  - How to restart the service after a configuration change: sudo systemctl restart haproxy.service
  - Resources used: haproxy.com/blog/the-four-essential-sections-of-an-haproxy-configuration/ and class lectures
 
