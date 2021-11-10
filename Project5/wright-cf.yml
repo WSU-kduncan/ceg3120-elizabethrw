@@ -187,7 +187,7 @@ Resources:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \
-            apt-get install -y apache && \ # installs apache
+            apt-get install -y apache2 && \ # installs apache
             apt-get install -y git && \
             hostnamectl set-hostname webServ1Host && \ # gives it a hostname - hostnamectl
             reboot
@@ -222,7 +222,7 @@ Resources:
           !Sub |
             #!/bin/bash -xe
             apt-get update && \
-            apt-get install -y apache && \ # installs apache
+            apt-get install -y apache2 && \ # installs apache
             apt-get install -y git && \
             hostnamectl set-hostname webServ2Host && \ # give it a hostname - hostnamectl
             reboot
