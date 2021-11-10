@@ -1,6 +1,6 @@
 README.md Documentation - Part 2
 ---
-1. Configured file by using the command "sudo vim /etc/hosts". At the bottom of the file, entered the private IP address of each instance followed by the hostname of the instance. Here is an example for what the webServ2Host /etc/hosts file looked like:
+1. Configured file by using the command "sudo vim /etc/hosts". At the bottom of the file, entered the private IP address of each instance followed by the hostname of the instance. Here is an example for what the proxy additions to the /etc/hosts looked like:
 
 10.0.0.8 proxy
 
