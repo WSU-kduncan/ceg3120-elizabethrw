@@ -185,13 +185,13 @@ Resources:
       UserData:
         Fn::Base64:
           !Sub |
-             #!/bin/bash -xe
+            #!/bin/bash -xe
             apt-get update && \
             apt-get install -y apache && \ # installs apache
             apt-get install -y git && \
             hostnamectl set-hostname webServ1Host && \ # gives it a hostname - hostnamectl
             reboot
-WebServ2Instance:
+  WebServ2Instance:
     Type: 'AWS::EC2::Instance'
     DependsOn: AttachGateway
     Properties:
